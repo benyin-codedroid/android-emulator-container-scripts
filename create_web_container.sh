@@ -96,9 +96,9 @@ generate_keys
 cp ~/.android/adbkey js/docker/certs
 
 # compose the container
-python -m venv .docker-venv
-source .docker-venv/bin/activate
-pip install docker-compose
+# python -m venv .docker-venv
+# source .docker-venv/bin/activate
+# pip install docker-compose
 docker-compose -f ${DOCKER_YAML} build
 rm js/docker/certs/adbkey
 

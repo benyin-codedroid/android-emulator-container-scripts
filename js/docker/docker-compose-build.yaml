@@ -16,19 +16,6 @@ services:
       - "443:8443"
       - "8001:8001"
       - "8080:8080"
-  emulator:
-    image: emulator_emulator:latest
-    build:
-      context: ../../bld/emulator
-      dockerfile: Dockerfile
-    networks:
-      envoymesh:
-        aliases:
-          - emulator
-    devices: [/dev/kvm]
-    shm_size: 128M
-    expose:
-      - "8554"
   nginx:
     image: emulator_nginx:latest
     build:

@@ -13,17 +13,17 @@ services:
       - "443:8080"
       - "8001:8001"
       - "8080:8080"
-  emulator:
-    image: emulator_emulator:latest
-    container_name: emulator_emulator
-    networks:
-      envoymesh:
-        aliases:
-          - emulator
-    devices: [/dev/kvm]
-    shm_size: 128M
-    expose:
-      - "8554"
+#  emulator:
+#    image: emulator_emulator:latest
+#    container_name: emulator_emulator
+#    networks:
+#      envoymesh:
+#        aliases:
+#          - emulator
+#    devices: [/dev/kvm]
+#    shm_size: 128M
+#    expose:
+#      - "8554"
   #jwt_signer:
   #  image: emulator_jwt_signer:latest
   #  container_name: emulator_jwt_signer
